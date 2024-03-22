@@ -7,7 +7,7 @@ from aiogram.utils import executor
 import dotenv
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import googleapiclient.discovery
-import requests
+import aiohttp
 import re
 import asyncio
 import sqlite3
@@ -91,7 +91,9 @@ async def Bot_sends_message_when_newVideo_uploaded(user_id):
         f"SELECT notifications FROM users WHERE id='{user_id}'").fetchone()[0]
 
     channel = "https://www.youtube.com/@DalmeeYT"
-    html = requests.get(channel + "/videos").text
+    async with aiohttp.ClientSession() as client:
+        async with client.get(channel + "/videos") as response:
+            html = response.text = await response.text()
     url = "https://www.youtube.com/watch?v=" + \
         re.search('(?<="videoId":").*?(?=")', html).group()
 
@@ -99,7 +101,9 @@ async def Bot_sends_message_when_newVideo_uploaded(user_id):
 
         user_notifications = cur.execute(
             f"SELECT notifications FROM users WHERE id='{user_id}'").fetchone()[0]
-        html = requests.get(channel + "/videos").text
+        async with aiohttp.ClientSession() as client:
+            async with client.get(channel + "/videos") as response:
+                html = response.text = await response.text()
         new_url = "https://www.youtube.com/watch?v=" + \
             re.search('(?<="videoId":").*?(?=")', html).group()
 
@@ -141,7 +145,7 @@ async def start(msg: Message):
         conn.commit()
 
     await msg.answer("Привет 👋 \nЯ - телеграм бот для ютубера Dalmee. Я буду отправлять тебе уведомления о выходе новых роликов, \
-                     а также ты можешь посмотреть все вышедшие на данный момент видео с помощью /videos!")
+а также ты можешь посмотреть все вышедшие на данный момент видео с помощью /videos!")
     await asyncio.create_task(Bot_sends_message_when_newVideo_uploaded(msg.from_user.id))
 
 

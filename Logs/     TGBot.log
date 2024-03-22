@@ -1,0 +1,82 @@
+[INFO     21.21.2023 18:04:18 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 18:04:18 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 18:04:18 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 18:04:18 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 18:04:18 at           start_polling]: Start polling.
+[INFO     21.21.2023 18:52:00 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 18:52:00 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 18:52:01 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 18:52:01 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 18:52:01 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:05:49 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:05:49 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:05:50 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:05:50 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:05:50 at           start_polling]: Start polling.
+[ERROR    21.21.2023 19:06:03 at           default_exception_handler]: Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OperationalError('table users has no column named notifications')>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "e:\TelegramBot_For_Dalmee\TelegramBot.py", line 135, in start
+    cur.execute(
+sqlite3.OperationalError: table users has no column named notifications
+[INFO     21.21.2023 19:06:21 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:06:21 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:06:21 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:06:21 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:06:21 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:06:32 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:06:32 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:06:32 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:06:32 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:06:32 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:07:22 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:07:22 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:07:23 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:07:23 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:07:23 at           start_polling]: Start polling.
+[ERROR    21.21.2023 19:07:25 at           default_exception_handler]: Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'NoneType' object is not subscriptable")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "e:\TelegramBot_For_Dalmee\TelegramBot.py", line 162, in notifications_command
+    user_notifications = cur.execute(
+TypeError: 'NoneType' object is not subscriptable
+[INFO     21.21.2023 19:22:01 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:22:01 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:22:01 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:22:01 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:22:01 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:23:51 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:23:51 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:23:51 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:23:51 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:23:51 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:24:21 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:24:21 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:24:21 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:24:21 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:24:21 at           start_polling]: Start polling.
+[INFO     21.21.2023 19:26:15 at           <module>]: Запускаю бота...
+[INFO     21.21.2023 19:26:15 at           <module>]: Загрузился успешно!
+[INFO     21.21.2023 19:26:15 at           _welcome]: Bot: Dalmee_bot [@Dalmee_bot]
+[WARNING  21.21.2023 19:26:15 at           _skip_updates]: Updates were skipped successfully.
+[INFO     21.21.2023 19:26:15 at           start_polling]: Start polling.
